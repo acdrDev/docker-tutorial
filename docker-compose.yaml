@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  app:
+    container_name: myfirstcontainer
+    ports:
+      - 3000:3000
+    build: ./
+    command: node app.js
+  mongodb:
+    image: mongo
+    container_name: mymongodatabase
+    ports:
+      - 27017:27017
